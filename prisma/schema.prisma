@@ -1,0 +1,93 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  STUDENT
+  ADMIN
+  INSTRUCTOR
+  ASSISTANCE
+}
+
+model User {
+  id          Int          @id @default(autoincrement())
+  name        String
+  email       String       @unique
+  password    String
+  role        Role         @default(STUDENT)
+  enrollments Enrollment[] 
+}
+
+model Course {
+  id          Int          @id @default(autoincrement())
+  title       String
+  description String
+  start_date  DateTime?
+  end_date    DateTime?
+  duration    String
+  enrollment  Enrollment[]
+  instructors Instructor[]
+  lessons     Lesson[]
+}
+
+model Enrollment {
+  id              Int      @id @default(autoincrement())
+  course_id       Int
+  user_id         Int
+  enrollment_date DateTime
+  user            User     @relation(fields: [user_id], references: [id])
+  course          Course   @relation(fields: [course_id], references: [id])
+}
+
+model Instructor {
+  id      Int      @id @default(autoincrement())
+  name    String
+  email   String   @unique
+  bio     String
+  courses Course[]
+}
+
+model Lesson {
+  id        Int    @id @default(autoincrement())
+  course_id Int
+  title     String
+  content   String
+  order     Int
+  course    Course @relation(fields: [course_id], references: [id])
+  quizes    Quiz[]
+}
+
+model Quiz {
+  id          Int        @id @default(autoincrement())
+  lesson_id   Int
+  title       String
+  description String
+  time_limit  String
+  total_marks Int
+  lesson      Lesson     @relation(fields: [lesson_id], references: [id])
+  questions   Question[]
+}
+
+model Question {
+  id             Int      @id @default(autoincrement())
+  quiz_id        Int
+  text           String
+  correct_option String
+  quiz           Quiz     @relation(fields: [quiz_id], references: [id])
+  options        Option[]
+}
+
+model Option {
+  id         Int      @id @default(autoincrement())
+  value      String
+  question   Question @relation(fields: [questionId], references: [id])
+  questionId Int
+}
