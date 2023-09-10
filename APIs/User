@@ -1,0 +1,75 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "User",
+    "dateExported": "2023-09-10T06:29:45.089Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "d8d7a27d-1c70-48f9-91c8-a051fdaecc92",
+            "colId": "621d380e-378f-4be2-acc0-c9228668a38e",
+            "containerId": "",
+            "name": "users",
+            "url": "http://localhost:3000/api/users",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-09-10T05:43:24.086Z",
+            "modified": "2023-09-10T05:43:41.365Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "06956fa7-e1e5-4b73-b965-41b2da2fcf35",
+            "colId": "621d380e-378f-4be2-acc0-c9228668a38e",
+            "containerId": "",
+            "name": "create",
+            "url": "http://localhost:3000/api/users/create",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-09-10T05:50:29.813Z",
+            "modified": "2023-09-10T06:18:59.698Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\" : \"islam2\",\n  \"email\": \"islam@example.com\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "de10cb77-ebee-4294-a1c1-035b5bc0e2cd",
+            "colId": "621d380e-378f-4be2-acc0-c9228668a38e",
+            "containerId": "",
+            "name": "update",
+            "url": "http://localhost:3000/api/users/update/2",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2023-09-10T06:06:32.386Z",
+            "modified": "2023-09-10T06:06:55.775Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"Anas\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "eeb7c1d0-1d1c-4129-9eec-95d49d67d596",
+            "colId": "621d380e-378f-4be2-acc0-c9228668a38e",
+            "containerId": "",
+            "name": "delete",
+            "url": "http://localhost:3000/api/users/delete/3",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2023-09-10T06:22:16.331Z",
+            "modified": "2023-09-10T06:22:24.018Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

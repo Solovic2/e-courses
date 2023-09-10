@@ -1,0 +1,75 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Courses",
+    "dateExported": "2023-09-10T06:29:53.520Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "d42a512e-df1c-4aaa-81b9-8597034b37c9",
+            "colId": "fba76a29-6c5a-4008-aa80-13283570517f",
+            "containerId": "",
+            "name": "courses",
+            "url": "http://localhost:3000/api/courses",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-09-10T05:48:03.435Z",
+            "modified": "2023-09-10T05:48:14.949Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "fad58f2c-73f0-4ea1-9ee9-ed2f45fdc432",
+            "colId": "fba76a29-6c5a-4008-aa80-13283570517f",
+            "containerId": "",
+            "name": "create",
+            "url": "http://localhost:3000/api/courses/create",
+            "method": "POST",
+            "sortNum": 15000,
+            "created": "2023-09-10T06:23:29.396Z",
+            "modified": "2023-09-10T06:27:59.372Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\" : \"Integrations\",\n  \"description\": \"Mathmatics Topic\",\n  \"duration\":\"36 Hours\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "a6cfb4f8-56d8-4f7f-a9b0-86658c77bdfd",
+            "colId": "fba76a29-6c5a-4008-aa80-13283570517f",
+            "containerId": "",
+            "name": "update",
+            "url": "http://localhost:3000/api/courses/update/2",
+            "method": "PUT",
+            "sortNum": 17500,
+            "created": "2023-09-10T06:23:30.484Z",
+            "modified": "2023-09-10T06:29:02.387Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\": \"Database\",\n  \"description\": \"CS Topic\",\n  \"duration\": \"36 Hours\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "44935f89-27a7-42f6-afc8-30b07f9873a8",
+            "colId": "fba76a29-6c5a-4008-aa80-13283570517f",
+            "containerId": "",
+            "name": "delete Copy",
+            "url": "http://localhost:3000/api/courses/delete/2",
+            "method": "DELETE",
+            "sortNum": 20000,
+            "created": "2023-09-10T06:23:19.964Z",
+            "modified": "2023-09-10T06:29:10.737Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
